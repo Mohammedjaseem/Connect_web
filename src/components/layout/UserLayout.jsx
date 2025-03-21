@@ -1,30 +1,41 @@
 import Footer from "../user/Footer";
 import { userPath } from "../../routes/routeConfig";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { FloatingNav } from "../ui/floating-navbar";
+import {
+  CustomerServiceOutlined,
+  HomeOutlined,
+  InfoCircleOutlined,
+  MessageOutlined,
+} from "@ant-design/icons";
 
-const UserLayout = ({ children, showFooter = true }) => {
+const UserLayout = ({ children, showFooter = false }) => {
   const navItems = [
     {
       name: "Home",
       link: userPath.home,
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: (
+        <HomeOutlined className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
     },
     {
       name: "Service",
       link: userPath.service,
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: (
+        <CustomerServiceOutlined className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
     },
     {
       name: "About",
       link: userPath.about,
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: (
+        <InfoCircleOutlined className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
     },
     {
       name: "Contact",
       link: userPath.contact,
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <MessageOutlined className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
   ];
@@ -32,7 +43,7 @@ const UserLayout = ({ children, showFooter = true }) => {
   return (
     <div className="min-h-screen">
       <FloatingNav navItems={navItems} />
-      <main className="container mx-auto min-h-[85vh]">{children}</main>
+      <main className="min-h-[85vh]">{children}</main>
       {showFooter && <Footer />}
     </div>
   );

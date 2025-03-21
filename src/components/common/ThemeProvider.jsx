@@ -7,7 +7,7 @@ function ThemeProvider({ children }) {
   const isDarkTheme = useSelector(selectIsDarkTheme);
 
   const getBackgroundColor = () => {
-    return isDarkTheme ? "#121212" : "#121212";
+    return isDarkTheme ? "rgb(0, 4, 20)" : "rgb(0, 4, 20)";
   };
 
   return (
