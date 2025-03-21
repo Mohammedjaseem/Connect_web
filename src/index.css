@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Custom Fonts */
+  --font-signature: "Lobster Two", "sans-serif";
+
+  /* Custom Colors */
+  --color-primary: #003135;
+  --color-secondary: #024950;
+  --color-lightGray: #1f1f1f;
+  --color-lightBlack: #151415;
+  --color-darkBlack: #0e0e0e;
+  --color-lightInput: #e5e7eb;
+  --color-darkInput: #2f2f2f;
+  --color-purpleHover: #081a511d;
+  --color-hashHover: #ffffff2b;
+  --color-redHover: #ff66662b;
+  --color-grayHover: #c0c0c01a;
+  --color-greenHover: #66ff662b;
+
+  /* Custom Easing Functions */
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@theme inline {
+  --animate-first: moveVertical 30s ease infinite;
+  --animate-second: moveInCircle 20s reverse infinite;
+  --animate-third: moveInCircle 40s linear infinite;
+  --animate-fourth: moveHorizontal 40s ease infinite;
+  --animate-fifth: moveInCircle 20s ease infinite;
+
+  @keyframes moveHorizontal {
+    0% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+    50% {
+      transform: translateX(50%) translateY(10%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-10%);
+    }
+  }
+
+  @keyframes moveInCircle {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes moveVertical {
+    0% {
+      transform: translateY(-50%);
+    }
+    50% {
+      transform: translateY(50%);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    font-family: "Roboto", serif;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 18px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #003135;
+  border-radius: 18px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #024950;
+}
