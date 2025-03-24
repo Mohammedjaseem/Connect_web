@@ -28,8 +28,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-2xl">
-      <Title className="mb-2" level={2}>
+    <div className="w-2xl mx-auto px-4">
+      <Title className="py-10  text-center" level={2}>
         Contact Us
       </Title>
       <p className="text-gray-500 mb-4">
@@ -48,7 +48,7 @@ const ContactForm = () => {
             },
           ]}
         >
-          <Input className="py-2" placeholder="Your Name" />
+          <Input className="py-2 h-12" placeholder="Your Name" />
         </Form.Item>
         <Form.Item
           name="email"
@@ -64,7 +64,7 @@ const ContactForm = () => {
             },
           ]}
         >
-          <Input className="py-2" placeholder="Email Address" />
+          <Input className="py-2 h-12" placeholder="Email Address" />
         </Form.Item>
         <Form.Item
           name="message"
@@ -76,9 +76,9 @@ const ContactForm = () => {
             },
           ]}
         >
-          <Input.TextArea placeholder="Your Message" rows={4} />
+          <Input.TextArea placeholder="Your Message" rows={6} />
         </Form.Item>
-        <Form.Item>
+        <Form.Item className="flex justify-end items-end">
           <Button
             className="flex justify-center items-center"
             size="large"

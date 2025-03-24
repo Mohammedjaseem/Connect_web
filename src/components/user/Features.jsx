@@ -1,61 +1,56 @@
 import {
-  IconAdjustmentsBolt,
+  IconSchool,
+  IconStethoscope,
+  IconBuildingHospital,
+  IconBuilding,
+  IconUsers,
   IconCloud,
-  IconCurrencyDollar,
-  IconEaseInOut,
-  IconHeart,
-  IconHelp,
-  IconRouteAltLeft,
-  IconTerminal2,
+  IconShieldLock,
+  IconSettings2,
 } from "@tabler/icons-react";
 import { cn } from "../../lib/utils";
 
 export function Features() {
   const features = [
     {
-      title: "Built for developers",
-      description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
-      icon: <IconTerminal2 />,
+      title: "School & College Management",
+      description: "Attendance tracking, staff & student management, gate pass system, leave management.",
+      icon: <IconSchool />,
     },
     {
-      title: "Ease of use",
-      description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
-      icon: <IconEaseInOut />,
+      title: "Hospital & Healthcare Solutions",
+      description: "Surgery scheduler, patient records management, doctor appointment system.",
+      icon: <IconStethoscope />,
     },
     {
-      title: "Pricing like no other",
-      description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
-      icon: <IconCurrencyDollar />,
+      title: "Resort & Hospitality Management",
+      description: "Room booking, guest check-in/check-out, staff management.",
+      icon: <IconBuildingHospital />,
     },
     {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
+      title: "Business Management Software",
+      description: "CRM, accounting, inventory management, and payroll solutions.",
+      icon: <IconBuilding />,
+    },
+    {
+      title: "Multi-Tenant SaaS Solutions",
+      description: "Cloud-based platforms for multiple businesses under one system.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
-      icon: <IconRouteAltLeft />,
+      title: "Advanced Security & Access Control",
+      description: "Role-based access control, visitor tracking, secure login systems.",
+      icon: <IconShieldLock />,
     },
     {
-      title: "24/7 Customer Support",
-      description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
+      title: "AI-Powered Insights & Analytics",
+      description: "Business intelligence dashboards and predictive analysis.",
+      icon: <IconUsers />,
     },
     {
-      title: "Money back guarantee",
-      description:
-        "If you donot like EveryAI, we will convince you to like us.",
-      icon: <IconAdjustmentsBolt />,
-    },
-    {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
-      icon: <IconHeart />,
+      title: "24/7 Customer Support & Uptime Guarantee",
+      description: "Reliable, round-the-clock AI-powered customer assistance.",
+      icon: <IconSettings2 />,
     },
   ];
   return (

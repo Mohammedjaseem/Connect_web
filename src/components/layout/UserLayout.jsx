@@ -1,4 +1,3 @@
-import Footer from "../user/Footer";
 import { userPath } from "../../routes/routeConfig";
 import { FloatingNav } from "../ui/floating-navbar";
 import {
@@ -7,6 +6,7 @@ import {
   InfoCircleOutlined,
   MessageOutlined,
 } from "@ant-design/icons";
+import Footer from "../ui/Footer";
 
 const UserLayout = ({ children, showFooter = false }) => {
   const navItems = [
@@ -42,9 +42,9 @@ const UserLayout = ({ children, showFooter = false }) => {
 
   return (
     <div className="min-h-screen">
-      <FloatingNav navItems={navItems} />
+      {/* <FloatingNav navItems={navItems} /> */}
       <main className="min-h-[85vh]">{children}</main>
-      {showFooter && <Footer />}
+       <Footer />
     </div>
   );
 };
