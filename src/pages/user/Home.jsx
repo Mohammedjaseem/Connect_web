@@ -1,7 +1,11 @@
 import UserLayout from "../../components/layout/UserLayout";
 import { BackgroundGradientAnimation } from "../../components/ui/background-gradient-animation";
+import { Features } from "../../components/user/Features";
 import HeroContent from "../../components/user/HeroContent";
-import { StickyScrollReveal } from "../../components/user/StickyScrollReveal";
+import { Journey } from "../../components/user/Journey";
+import { Projects } from "../../components/user/Projects";
+// import { StickyScrollReveal } from "../../components/user/StickyScrollReveal";
+import { Testimonials } from "../../components/user/Testimonials";
 
 function Home() {
   return (
@@ -9,7 +13,11 @@ function Home() {
       <BackgroundGradientAnimation>
         <HeroContent />
       </BackgroundGradientAnimation>
-      <StickyScrollReveal />
+      <Features />
+      {/* <StickyScrollReveal /> */}
+      <Testimonials />
+      <Projects />
+      <Journey />
     </UserLayout>
   );
 }

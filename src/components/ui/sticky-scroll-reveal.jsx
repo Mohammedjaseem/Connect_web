@@ -32,7 +32,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
   });
 
   const backgroundColors = [
-    "#0a0c1a", // Deep navy blue
+    "#000414", // Deep navy blue
     "#0d1117", // Dark graphite
     "#1a1a1a", // Rich black
     "#14181f", // Dark slate blue

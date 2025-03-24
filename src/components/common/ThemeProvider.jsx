@@ -16,7 +16,7 @@ function ThemeProvider({ children }) {
         token: {
           colorPrimary: "#081A51",
         },
-        algorithm: isDarkTheme ? theme.darkAlgorithm : theme.lightAlgorithm,
+        algorithm: isDarkTheme ? theme.darkAlgorithm : theme.darkAlgorithm,
       }}
     >
       <div

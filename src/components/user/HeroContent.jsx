@@ -1,4 +1,9 @@
 import { motion } from "framer-motion";
+import partner1 from "../../assets/image/partners/edentu.dental.learning.app.png";
+import partner2 from "../../assets/image/partners/malabar.dental.college.png";
+import partner3 from "../../assets/image/partners/levalor.health.png";
+import partner4 from "../../assets/image/partners/eranad.knowledge.city.png";
+import partner5 from "../../assets/image/partners/levalor.resort.png";
 
 const HeroContent = () => {
   return (
@@ -49,9 +54,6 @@ const HeroContent = () => {
           transition={{ delay: 0.9, duration: 0.8 }}
           className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
         >
-          <button className="px-8 py-4 bg-gradient-to-r from-gray-700 via-gray-800 to-gray-900 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-            Get Started
-          </button>
           <button className="px-8 py-4 bg-gradient-to-r from-gray-100 to-gray-200 border border-gray-300 text-gray-700 font-medium rounded-lg hover:shadow-md transform hover:-translate-y-1 transition-all duration-300">
             Learn More
           </button>
@@ -64,16 +66,20 @@ const HeroContent = () => {
           className="mt-10 flex items-center justify-center lg:justify-start space-x-6"
         >
           <div className="flex -space-x-2">
-            {[...Array(4)].map((_, i) => (
-              <div
-                key={i}
-                className="w-8 h-8 rounded-full border-2 border-white bg-gray-300"
-              ></div>
-            ))}
+            {[partner1, partner2, partner3, partner4, partner5].map(
+              (src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Partner Image ${i + 1}`}
+                  className="w-10 h-10 rounded-full border-2 border-white bg-gray-300"
+                />
+              )
+            )}
           </div>
-          <p className="text-sm text-gray-600">
-            <span className="font-semibold text-gray-800">2,500+</span>{" "}
-            businesses trust us
+          <p className="text-sm text-gray-500">
+            <span className="font-semibold text-gray-600">10+</span> businesses
+            trust us
           </p>
         </motion.div>
       </motion.div>
@@ -102,7 +108,7 @@ const HeroContent = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="relative"
+            className="hidden md:flex relative"
           >
             {/* Card 1 */}
             <motion.div
