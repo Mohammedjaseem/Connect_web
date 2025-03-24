@@ -43,7 +43,7 @@ const UserLayout = ({ children, showFooter = false }) => {
   return (
     <div className="min-h-screen">
       <FloatingNav navItems={navItems} />
-      <main className="min-h-[150vh]">{children}</main>
+      <main className="min-h-[85vh]">{children}</main>
       {showFooter && <Footer />}
     </div>
   );
