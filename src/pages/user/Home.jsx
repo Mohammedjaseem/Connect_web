@@ -68,7 +68,7 @@ function Home() {
         <AboutSection />
       </div>
 
-      <div className="mt-20" ref={featuresRef} id="features">
+      <div className="pt-24" ref={featuresRef} id="features">
         <h1 className="text-center text-white text-4xl font-bold">
           What we do?
         </h1>
@@ -76,14 +76,14 @@ function Home() {
       </div>
 
       <div ref={testimonialsRef} id="testimonials">
-        <h1 className="mt-20 text-center text-white text-4xl font-bold">
+        <h1 className="pt-24 text-center text-white text-4xl font-bold">
           Testimonials
         </h1>
         <Testimonials />
       </div>
 
       <div ref={projectsRef} id="projects">
-        <h1 className="mt-20 text-center text-white text-4xl font-bold">
+        <h1 className="pt-24 text-center text-white text-4xl font-bold">
           What We Offer!
         </h1>
         <Projects />

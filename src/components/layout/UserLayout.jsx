@@ -17,16 +17,16 @@ const UserLayout = ({ children }) => {
       icon: <HomeIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
+      name: "About",
+      link: userPath.about,
+      icon: <InfoIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
       name: "Features",
       link: userPath.features,
       icon: (
         <FormatListBulletedIcon className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
-    },
-    {
-      name: "About",
-      link: userPath.about,
-      icon: <InfoIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Testimonials",

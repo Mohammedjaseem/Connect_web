@@ -37,7 +37,7 @@ const ContactForm = () => {
 
   return (
     <div className="w-2xl mx-auto px-4">
-      <h1 className="my-10 text-center text-white text-4xl font-bold">
+      <h1 className="mt-14 mb-8 text-center text-white text-4xl font-bold">
         Contact Us
       </h1>
       <p className="text-gray-500 mb-4">

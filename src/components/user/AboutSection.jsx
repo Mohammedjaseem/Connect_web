@@ -4,7 +4,7 @@ import { userPath } from "../../routes/routeConfig";
 
 const AboutSection = () => {
   return (
-    <div className="relative w-full overflow-hidden py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#020817] to-[#0b1120]">
+    <div className="relative w-full overflow-hidden py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#020817] to-[#0b1120]">
       {/* Animated dots background */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxIiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==')]"></div>
