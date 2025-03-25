@@ -1,5 +1,5 @@
 "use client";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -29,7 +29,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-sm px-6 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 overflow-hidden">
       <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
         <div>
           <div className="relative h-80 w-full">
@@ -133,15 +133,21 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-7 w-7 p-2 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
             >
-              <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              <ArrowLeftOutlined
+                style={{ color: "#a1a1a1 " }}
+                className="h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12"
+              />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-7 w-7 p-2 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
             >
-              <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              <ArrowRightOutlined
+                style={{ color: "#a1a1a1 " }}
+                className="h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12"
+              />
             </button>
           </div>
         </div>

@@ -1,6 +1,9 @@
 export const userPath = {
   home: "/",
-  about: "/about",
-  service: "/service",
-  contact: "/contact",
+  about: "#about",
+  features: "#features",
+  testimonials: "#testimonials",
+  projects: "#projects",
+  journey: "#journey",
+  contact: "#contact",
 };

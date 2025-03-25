@@ -25,7 +25,7 @@ const HeroContent = () => {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0 }}  
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6"
@@ -47,17 +47,6 @@ const HeroContent = () => {
           We provide cutting-edge IT solutions that bridge the gap between your
           business goals and technological innovation.
         </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
-          className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4"
-        >
-          <button className="px-8 py-4 bg-gradient-to-r from-gray-100 to-gray-200 border border-gray-300 text-gray-700 font-medium rounded-lg hover:shadow-md transform hover:-translate-y-1 transition-all duration-300">
-            Learn More
-          </button>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -89,7 +78,7 @@ const HeroContent = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
-        className="w-full lg:w-1/2 mt-10 lg:mt-0 flex justify-center lg:justify-end"
+        className="w-full lg:w-1/2 mt-10 lg:mt-30 hidden md:flex justify-center lg:justify-end"
       >
         <div className="relative max-w-lg">
           {/* Background decorative elements */}
@@ -108,7 +97,7 @@ const HeroContent = () => {
               repeat: Infinity,
               repeatType: "loop",
             }}
-            className="hidden md:flex relative"
+            className="relative"
           >
             {/* Card 1 */}
             <motion.div

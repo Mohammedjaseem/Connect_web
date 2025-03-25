@@ -1,37 +1,45 @@
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import { Button, Form, Input, Typography } from "antd";
+import { Button, Form, Input } from "antd";
 import { hideLoading, showLoading } from "../../redux/alertSlice";
-import { contactMessage } from "../../api/services/userService";
 import { SendOutlined } from "@ant-design/icons";
-
-const { Title } = Typography;
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const onFinish = async (values) => {
-    try {
-      dispatch(showLoading());
-      const response = await contactMessage(values);
-      dispatch(hideLoading());
-      if (response.data.success) {
-        toast.success(response.data.message);
-      } else {
-        toast.error(response.data.message);
-      }
-    } catch (error) {
-      dispatch(hideLoading());
-      console.log(error);
-      toast.error("Something went wrong");
-    }
+  const onFinish = (values) => {
+    dispatch(showLoading());
+
+    const templateParams = {
+      name: values.name,
+      email: values.email,
+      message: values.message,
+    };
+
+    emailjs
+      .send(
+        "service_x79firc", // Replace with your EmailJS service ID
+        "template_i988v5v", // Replace with your EmailJS template ID
+        templateParams,
+        "_7Nyvjtyl2zeqk3_3" // Replace with your EmailJS public key
+      )
+      .then((response) => {
+        dispatch(hideLoading());
+        toast.success("Message sent successfully!");
+      })
+      .catch((error) => {
+        dispatch(hideLoading());
+        console.error("Email sending error:", error);
+        toast.error("Failed to send message");
+      });
   };
 
   return (
     <div className="w-2xl mx-auto px-4">
-      <Title className="py-10  text-center" level={2}>
+      <h1 className="my-10 text-center text-white text-4xl font-bold">
         Contact Us
-      </Title>
+      </h1>
       <p className="text-gray-500 mb-4">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you need
         assistance, have feedback, or anything else, feel free to reach out to
