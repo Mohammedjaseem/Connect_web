@@ -2,42 +2,32 @@ import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { Button, Form, Input } from "antd";
 import { hideLoading, showLoading } from "../../redux/alertSlice";
+import { contactMessage } from "../../api/services/userService";
 import { SendOutlined } from "@ant-design/icons";
-import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const onFinish = (values) => {
-    dispatch(showLoading());
-
-    const templateParams = {
-      name: values.name,
-      email: values.email,
-      message: values.message,
-    };
-
-    emailjs
-      .send(
-        "service_x79firc", // Replace with your EmailJS service ID
-        "template_i988v5v", // Replace with your EmailJS template ID
-        templateParams,
-        "_7Nyvjtyl2zeqk3_3" // Replace with your EmailJS public key
-      )
-      .then((response) => {
-        dispatch(hideLoading());
-        toast.success("Message sent successfully!");
-      })
-      .catch((error) => {
-        dispatch(hideLoading());
-        console.error("Email sending error:", error);
-        toast.error("Failed to send message");
-      });
+  const onFinish = async (values) => {
+    try {
+      dispatch(showLoading());
+      const response = await contactMessage(values);
+      dispatch(hideLoading());
+      if (response.data.success) {
+        toast.success(response.data.message);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      dispatch(hideLoading());
+      console.log(error);
+      toast.error("Something went wrong");
+    }
   };
 
   return (
     <div className="w-2xl mx-auto px-4">
-      <h1 className="mt-14 mb-8 text-center text-white text-4xl font-bold">
+      <h1 className="my-10 text-center text-white text-4xl font-bold">
         Contact Us
       </h1>
       <p className="text-gray-500 mb-4">
@@ -73,6 +63,23 @@ const ContactForm = () => {
           ]}
         >
           <Input className="py-2 h-12" placeholder="Email Address" />
+        </Form.Item>
+
+        <Form.Item
+          name="phone"
+          label="Phone Number"
+          rules={[
+            {
+              required: true,
+              message: "Please enter your phone number!",
+            },
+            {
+              pattern: /^[0-9]{10}$/, // Adjust regex based on your needs
+              message: "Please enter a valid 10-digit phone number!",
+            },
+          ]}
+        >
+          <Input className="py-2 h-12" placeholder="Phone Number" />
         </Form.Item>
         <Form.Item
           name="message"
