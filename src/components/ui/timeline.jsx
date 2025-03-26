@@ -28,15 +28,16 @@ export const Timeline = ({ data }) => {
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto pt-10 px-4 md:px-8 lg:px-10">
-        <h2 className="text-center text-lg md:text-4xl mb-4 text-black dark:text-white ">
-           Our journey
-        </h2>
+        <h1 className="mt-20 mb-10 text-center text-white text-4xl font-bold">
+          Our Journey
+        </h1>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
-          Over the last four years, we’ve transformed Connect from a humble idea into a robust 
-          platform that unites communities, teams, and individuals. Along the way, we’ve celebrated 
-          milestones, tackled obstacles, and developed features that make collaboration easier 
-          and more meaningful. Scroll through the timeline below to explore our story and witness 
-          how Connect has grown into what it is today.
+          Over the last four years, we’ve transformed Connect from a humble idea
+          into a robust platform that unites communities, teams, and
+          individuals. Along the way, we’ve celebrated milestones, tackled
+          obstacles, and developed features that make collaboration easier and
+          more meaningful. Scroll through the timeline below to explore our
+          story and witness how Connect has grown into what it is today.
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

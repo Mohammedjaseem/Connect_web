@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const userBaseUrl = import.meta.env.VITE_USER_URL;
+const userBaseUrl = "https://conext.in/suggestions/api";
 
 const createAxiosClient = (baseURL) => {
   const client = axios.create({

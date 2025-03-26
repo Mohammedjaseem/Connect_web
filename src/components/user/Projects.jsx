@@ -55,7 +55,7 @@ export function Projects() {
   ];
 
   return (
-    <div className="h-[35rem] md:h-[29rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-30 mt-10">
+    <div className="h-[36rem] md:h-[29rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-30 mt-10 px-5">
       <Tabs
         tabs={tabs.map((tab) => ({
           ...tab,

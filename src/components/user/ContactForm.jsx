@@ -1,11 +1,9 @@
 import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
-import { Button, Form, Input, Typography } from "antd";
+import { Button, Form, Input } from "antd";
 import { hideLoading, showLoading } from "../../redux/alertSlice";
 import { contactMessage } from "../../api/services/userService";
 import { SendOutlined } from "@ant-design/icons";
-
-const { Title } = Typography;
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -29,9 +27,9 @@ const ContactForm = () => {
 
   return (
     <div className="w-2xl mx-auto px-4">
-      <Title className="py-10  text-center" level={2}>
+      <h1 className="my-10 text-center text-white text-4xl font-bold">
         Contact Us
-      </Title>
+      </h1>
       <p className="text-gray-500 mb-4">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you need
         assistance, have feedback, or anything else, feel free to reach out to
@@ -65,6 +63,23 @@ const ContactForm = () => {
           ]}
         >
           <Input className="py-2 h-12" placeholder="Email Address" />
+        </Form.Item>
+
+        <Form.Item
+          name="phone"
+          label="Phone Number"
+          rules={[
+            {
+              required: true,
+              message: "Please enter your phone number!",
+            },
+            {
+              pattern: /^[0-9]{10}$/, // Adjust regex based on your needs
+              message: "Please enter a valid 10-digit phone number!",
+            },
+          ]}
+        >
+          <Input className="py-2 h-12" placeholder="Phone Number" />
         </Form.Item>
         <Form.Item
           name="message"
