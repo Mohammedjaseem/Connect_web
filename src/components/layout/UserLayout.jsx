@@ -1,6 +1,5 @@
 import { userPath } from "../../routes/routeConfig";
 import { FloatingNav } from "../ui/floating-navbar";
-import Footer from "../ui/Footer";
 import HomeIcon from "@mui/icons-material/Home";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import InfoIcon from "@mui/icons-material/Info";
@@ -8,6 +7,7 @@ import TryIcon from "@mui/icons-material/Try";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import RouteIcon from "@mui/icons-material/Route";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
+import Footer from "../user/Footer";
 
 const UserLayout = ({ children }) => {
   const navItems = [

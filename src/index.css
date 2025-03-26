@@ -83,6 +83,7 @@
 @layer base {
   html {
     font-family: "Roboto", serif;
+    scroll-behavior: smooth;
   }
 }
 

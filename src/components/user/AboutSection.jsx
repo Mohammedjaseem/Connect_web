@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { userPath } from "../../routes/routeConfig";
+import connectFont from "../../assets/image/logo/connect.font.png";
 
 const AboutSection = () => {
   return (
@@ -113,13 +114,17 @@ const AboutSection = () => {
               {/* Central text */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    The Connect
-                  </h3>
+                  <div className="flex justify-center">
+                    <img
+                      src={connectFont}
+                      alt="Connect Font"
+                      className="w-52 h-auto mb-4"
+                    />
+                  </div>
                   <p className="text-gray-300">
                     Experience seamless integration, intuitive user interface,
-                    and unparalleled support
                   </p>
+                  <p className="text-gray-300">and unparalleled support</p>
                 </div>
               </div>
             </div>

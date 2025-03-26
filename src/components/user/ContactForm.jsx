@@ -10,8 +10,14 @@ const ContactForm = () => {
 
   const onFinish = async (values) => {
     try {
+      const payload = {
+        name: values.name,
+        email: values.email,
+        message: values.message,
+        ...(values.phone && { phone: values.phone }),
+      };
       dispatch(showLoading());
-      const response = await contactMessage(values);
+      const response = await contactMessage(payload);
       dispatch(hideLoading());
       if (response.data.status === "success") {
         toast.success(response.data.message);

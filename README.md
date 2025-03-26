@@ -51,7 +51,6 @@ Ensure you have the following installed:
 5. **Run the application:**
    ```bash
    npm start
-   ``` start
    ```
 
    The application will be running on [http://localhost:3000](http://localhost:3000)
