@@ -13,7 +13,7 @@ const ContactForm = () => {
       dispatch(showLoading());
       const response = await contactMessage(values);
       dispatch(hideLoading());
-      if (response.data.success) {
+      if (response.data.status === "success") {
         toast.success(response.data.message);
       } else {
         toast.error(response.data.message);
@@ -69,10 +69,6 @@ const ContactForm = () => {
           name="phone"
           label="Phone Number"
           rules={[
-            {
-              required: true,
-              message: "Please enter your phone number!",
-            },
             {
               pattern: /^[0-9]{10}$/, // Adjust regex based on your needs
               message: "Please enter a valid 10-digit phone number!",

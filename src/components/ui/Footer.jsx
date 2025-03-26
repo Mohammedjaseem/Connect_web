@@ -4,6 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import RoomRoundedIcon from "@mui/icons-material/RoomRounded";
 import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import MailRoundedIcon from "@mui/icons-material/MailRounded";
+import connectFont from "../../assets/image/logo/connect.font.png";
 
 const Footer = () => {
   return (
@@ -12,7 +13,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1">
-            <h3 className="text-2xl font-bold mb-4">Connect</h3>
+            <img
+              src={connectFont}
+              alt="Connect Font"
+              className="w-52 h-auto mb-6"
+            />
+
             <p className="text-gray-300 mb-4">
               Innovative IT solutions driving digital transformation for
               businesses worldwide.
@@ -121,7 +127,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-4 text-center md:text-left">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
-              © 2025 Edentu pvt ltd. All Rights Reserved.
+              © 2025 Edentu Pvt Ltd. All Rights Reserved.
             </p>
             <div className="space-x-4">
               {/* <a
