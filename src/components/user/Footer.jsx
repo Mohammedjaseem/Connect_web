@@ -71,16 +71,14 @@ const Footer = () => {
           {/* Services */}
           <div className="col-span-1">
             <h4 className="text-xl font-semibold mb-4">Our Services</h4>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 gap-2">
               {[
-                "Cloud Computing",
                 "Web Development",
-                "AI Solutions",
-                "IT Consulting",
+                "Industry Specific Solutions",
+                "Digital & Software Solutions",
               ].map((service, index) => (
                 <a
                   key={index}
-                  href="#"
                   className="text-gray-300 hover:text-white transition text-sm"
                 >
                   {service}

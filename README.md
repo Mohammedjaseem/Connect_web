@@ -23,6 +23,11 @@ Connect Solution is a boutique digital transformation consultancy and developmen
 - **Ant Design** - A UI component library for professional design.
 - **Axios** - A promise-based HTTP client for API requests.
 
+## Access the live project
+
+The live project can be accessed at [connect.edentu.com](https://connect.edentu.com)
+
+
 ## Getting Started
 
 ### Prerequisites
@@ -34,7 +39,7 @@ Ensure you have the following installed:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/afsaled/connect-official.git
+   git clone https://github.com/Mohammedjaseem/Connect_web.git
    ```
 
 2. **Install dependencies:**
@@ -42,13 +47,7 @@ Ensure you have the following installed:
    npm install
    ```
 
-3. **Set up environment variables:**
-   Create a `.env` file in the root directory and configure necessary variables:
-   ```bash
-   VITE_API_BASE_URL=https://api.connectsolution.com
-   ```
-
-5. **Run the application:**
+3. **Run the application:**
    ```bash
    npm start
    ```
