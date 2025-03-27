@@ -25,25 +25,25 @@ export function Projects() {
         "Our maintenance arm ensures the smooth operation and reliability of your products and systems.",
     },
     {
-      title: "Gate Pass",
-      value: "Gate Pass",
-      image: gatePassImg,
+      title: "Geo Punching",
+      value: "Geo Punching",
+      image: geoPunchingImg,
       description:
-        "Students and staff can request permission for early or outgoing departures.",
+        "A location-based attendance tracking system that ensures accurate check-ins and check-outs.",
     },
     {
-      title: "Surgery Schedule",
-      value: "Surgery Schedule",
-      image: surgeryScheduleImg,
+      title: "Task Manager",
+      value: "Task Manager",
+      image: taskManagerImg,
       description:
-        "Doctors can receive messages about today's scheduled surgeries and receive reminders for the day.",
+        "Organize, assign, and track tasks efficiently to enhance productivity and collaboration.",
     },
     {
-      title: "Vehicle Booking",
-      value: "Vehicle Booking",
-      image: vehicleBookingImg,
+      title: "Voucher System",
+      value: "Voucher System",
+      image: voucherSystemImg,
       description:
-        "In our vehicle booking system, you can reserve vehicles for guests or for personal use.",
+        "A digital solution for generating, distributing, and redeeming vouchers efficiently.",
     },
     {
       title: "Leave Request",
@@ -59,18 +59,18 @@ export function Projects() {
       description: "Customize attendance marking for your needs.",
     },
     {
-      title: "Task Manager",
-      value: "Task Manager",
-      image: taskManagerImg,
+      title: "Surgery Schedule",
+      value: "Surgery Schedule",
+      image: surgeryScheduleImg,
       description:
-        "Organize, assign, and track tasks efficiently to enhance productivity and collaboration.",
+        "Doctors can receive messages about today's scheduled surgeries and receive reminders for the day.",
     },
     {
-      title: "Geo Punching",
-      value: "Geo Punching",
-      image: geoPunchingImg,
+      title: "Vehicle Booking",
+      value: "Vehicle Booking",
+      image: vehicleBookingImg,
       description:
-        "A location-based attendance tracking system that ensures accurate check-ins and check-outs.",
+        "In our vehicle booking system, you can reserve vehicles for guests or for personal use.",
     },
     // {
     //   title: "Appointment",
@@ -94,11 +94,11 @@ export function Projects() {
     //     "Book and manage venues for events, meetings, and conferences with ease.",
     // },
     {
-      title: "Voucher System",
-      value: "Voucher System",
-      image: voucherSystemImg,
+      title: "Gate Pass",
+      value: "Gate Pass",
+      image: gatePassImg,
       description:
-        "A digital solution for generating, distributing, and redeeming vouchers efficiently.",
+        "Students and staff can request permission for early or outgoing departures.",
     },
   ];
 

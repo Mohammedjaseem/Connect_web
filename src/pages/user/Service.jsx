@@ -1,9 +1,15 @@
 import UserLayout from "../../components/layout/UserLayout";
+import { Projects } from "../../components/user/Projects";
 
 function Service() {
   return (
     <UserLayout>
-      <h1 className="text-2xl text-center text-white">Services</h1>
+      <div className="pb-10">
+        <h1 className="pt-10 text-center text-white text-4xl font-bold">
+          What We Offer!
+        </h1>
+        <Projects />
+      </div>
     </UserLayout>
   );
 }

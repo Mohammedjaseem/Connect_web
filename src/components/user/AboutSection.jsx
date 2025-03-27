@@ -23,10 +23,10 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 pb-6">
             Innovating with a Digital Mindset
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4 rounded-full" />
+          <div className="w-60 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
         </motion.div>
 
         {/* Content grid */}
@@ -75,7 +75,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative h-80 w-full rounded-2xl overflow-hidden border border-gray-700/50 bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm">
+            <div className="relative h-96 w-full rounded-2xl overflow-hidden border border-gray-700/50 bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm">
               {/* Animated floating cards */}
               <motion.div
                 animate={{
