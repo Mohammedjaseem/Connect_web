@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { userPath } from "../../routes/routeConfig";
+import connectFont from "../../assets/image/logo/connect.font.png";
 
 const AboutSection = () => {
   return (
@@ -22,10 +23,10 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 pb-6">
             Innovating with a Digital Mindset
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4 rounded-full" />
+          <div className="w-60 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full" />
         </motion.div>
 
         {/* Content grid */}
@@ -74,7 +75,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative h-80 w-full rounded-2xl overflow-hidden border border-gray-700/50 bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm">
+            <div className="relative h-96 w-full rounded-2xl overflow-hidden border border-gray-700/50 bg-gradient-to-br from-blue-900/30 to-purple-900/30 backdrop-blur-sm">
               {/* Animated floating cards */}
               <motion.div
                 animate={{
@@ -113,13 +114,17 @@ const AboutSection = () => {
               {/* Central text */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    The Connect
-                  </h3>
+                  <div className="flex justify-center">
+                    <img
+                      src={connectFont}
+                      alt="Connect Font"
+                      className="w-52 h-auto mb-4"
+                    />
+                  </div>
                   <p className="text-gray-300">
                     Experience seamless integration, intuitive user interface,
-                    and unparalleled support
                   </p>
+                  <p className="text-gray-300">and unparalleled support</p>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@
   "author": "afsify",
   "description": "Connect By Edentu Official Website",
   "scripts": {
-    "start": "vite",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

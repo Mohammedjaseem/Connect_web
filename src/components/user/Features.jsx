@@ -5,7 +5,7 @@ import HotelIcon from "@mui/icons-material/Hotel";
 import BusinessIcon from "@mui/icons-material/Business";
 import CloudDoneIcon from "@mui/icons-material/CloudDone";
 import SecurityIcon from "@mui/icons-material/Security";
-import TipsAndUpdatesIcon from '@mui/icons-material/TipsAndUpdates';
+import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 export function Features() {

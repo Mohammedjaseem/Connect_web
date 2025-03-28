@@ -6,4 +6,8 @@ export const userPath = {
   projects: "#projects",
   journey: "#journey",
   contact: "#contact",
+  aboutPage: "/about",
+  servicePage: "/service",
+  careersPage: "/careers",
+  contactPage: "/contact",
 };

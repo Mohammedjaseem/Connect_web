@@ -8,6 +8,12 @@ import surgeryScheduleImg from "../../assets/image/services/surgery.schedule.jpg
 import vehicleBookingImg from "../../assets/image/services/vehicle.booking.jpg";
 import leaveRequestImg from "../../assets/image/services/leave.request.jpg";
 import attendanceImg from "../../assets/image/services/attendance.jpg";
+import taskManagerImg from "../../assets/image/services/task.manager.jpg";
+import geoPunchingImg from "../../assets/image/services/geo.punching.jpg";
+// import appointmentImg from "../../assets/image/services/appointment.jpg";
+import meetingScheduleImg from "../../assets/image/services/meeting.schedule.jpg";
+// import venueBookingImg from "../../assets/image/services/venue.booking.jpg";
+import voucherSystemImg from "../../assets/image/services/voucher.system.jpg";
 
 export function Projects() {
   const tabs = [
@@ -19,11 +25,38 @@ export function Projects() {
         "Our maintenance arm ensures the smooth operation and reliability of your products and systems.",
     },
     {
-      title: "Gate Pass",
-      value: "Gate Pass",
-      image: gatePassImg,
+      title: "Geo Punching",
+      value: "Geo Punching",
+      image: geoPunchingImg,
       description:
-        "Students and staff can request permission for early or outgoing departures.",
+        "A location-based attendance tracking system that ensures accurate check-ins and check-outs.",
+    },
+    {
+      title: "Task Manager",
+      value: "Task Manager",
+      image: taskManagerImg,
+      description:
+        "Organize, assign, and track tasks efficiently to enhance productivity and collaboration.",
+    },
+    {
+      title: "Voucher System",
+      value: "Voucher System",
+      image: voucherSystemImg,
+      description:
+        "A digital solution for generating, distributing, and redeeming vouchers efficiently.",
+    },
+    {
+      title: "Leave Request",
+      value: "Leave Request",
+      image: leaveRequestImg,
+      description:
+        "Digital system for employees or students to request and receive leave approvals.",
+    },
+    {
+      title: "Attendance",
+      value: "Attendance",
+      image: attendanceImg,
+      description: "Customize attendance marking for your needs.",
     },
     {
       title: "Surgery Schedule",
@@ -39,23 +72,38 @@ export function Projects() {
       description:
         "In our vehicle booking system, you can reserve vehicles for guests or for personal use.",
     },
+    // {
+    //   title: "Appointment",
+    //   value: "Appointment",
+    //   image: appointmentImg,
+    //   description:
+    //     "Schedule and manage appointments seamlessly, reducing conflicts and improving efficiency.",
+    // },
     {
-      title: "Leave Request",
-      value: "Leave Request",
-      image: leaveRequestImg,
+      title: "Meeting Schedule",
+      value: "Meeting Schedule",
+      image: meetingScheduleImg,
       description:
-        "Digital system for employees or students to request and receive leave approvals.",
+        "Plan, schedule, and manage meetings with reminders and easy participant coordination.",
     },
+    // {
+    //   title: "Venue Booking",
+    //   value: "Venue Booking",
+    //   image: venueBookingImg,
+    //   description:
+    //     "Book and manage venues for events, meetings, and conferences with ease.",
+    // },
     {
-      title: "Attendance",
-      value: "Attendance",
-      image: attendanceImg,
-      description: "Customize attendance marking for your needs.",
+      title: "Gate Pass",
+      value: "Gate Pass",
+      image: gatePassImg,
+      description:
+        "Students and staff can request permission for early or outgoing departures.",
     },
   ];
 
   return (
-    <div className="h-[36rem] md:h-[29rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-30 mt-10 px-5">
+    <div className="h-[37rem] md:h-[33rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start mb-30 mt-10 px-5">
       <Tabs
         tabs={tabs.map((tab) => ({
           ...tab,

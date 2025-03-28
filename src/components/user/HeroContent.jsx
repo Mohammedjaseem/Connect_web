@@ -4,6 +4,7 @@ import partner2 from "../../assets/image/partners/malabar.dental.college.png";
 import partner3 from "../../assets/image/partners/levalor.health.png";
 import partner4 from "../../assets/image/partners/eranad.knowledge.city.png";
 import partner5 from "../../assets/image/partners/levalor.resort.png";
+import connectFont from "../../assets/image/logo/connect.font.png";
 
 const HeroContent = () => {
   return (
@@ -25,7 +26,7 @@ const HeroContent = () => {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0 }}  
+          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6"
@@ -156,9 +157,11 @@ const HeroContent = () => {
                 </div>
 
                 {/* Connect logo */}
-                <div className="relative z-10 bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300 text-transparent bg-clip-text text-6xl font-extrabold">
-                  Connect
-                </div>
+                <img
+                  src={connectFont}
+                  alt="Connect Font"
+                  className="w-52 h-auto"
+                />
               </div>
 
               <div className="mt-4 flex justify-between items-center">
