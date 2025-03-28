@@ -20,6 +20,9 @@ import { MdWorkOutline, MdLocationOn } from "react-icons/md";
 import { GiMoneyStack } from "react-icons/gi";
 import { motion } from "framer-motion";
 import UserLayout from "../../components/layout/UserLayout";
+import thufail from "../../assets/image/team/thufail.jpg";
+import shihab from "../../assets/image/team/shihab.jpg";
+import haseeb from "../../assets/image/team/haseeb.jpg";
 import afsal from "../../assets/image/team/afsal.png";
 import anwar from "../../assets/image/team/anwar.jpg";
 import harsal from "../../assets/image/team/harsal.jpg";
@@ -32,120 +35,155 @@ const Careers = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const jobOpenings = [
-    {
-      id: 1,
-      title: "Frontend Developer",
-      type: "Full-time",
-      location: "HiLITE Business Park, Calicut",
-      department: "Frontend Development",
-      description:
-        "Build beautiful, responsive user interfaces using React and modern CSS frameworks.",
-      salary: "₹30,000 - ₹40,000",
-      icon: <FaCode className="text-blue-400 text-2xl" />,
-      skills: ["JavaScript", "React", "Tailwind CSS", "TypeScript"],
-    },
-    {
-      id: 2,
-      title: "Backend Developer",
-      type: "Full-time",
-      location: "HiLITE Business Park, Calicut",
-      department: "Backend Development",
-      description:
-        "Design and implement scalable backend systems with Node.js and cloud technologies.",
-      salary: "₹30,000 - ₹40,000",
-      icon: <FaServer className="text-emerald-400 text-2xl" />,
-      skills: ["Django", "Python", "GraphQL", "REST APIs"],
-    },
-    {
-      id: 3,
-      title: "Mobile Developer",
-      type: "Full-time",
-      location: "HiLITE Business Park, Calicut",
-      department: "App Development",
-      description:
-        "Create cross-platform mobile applications with React Native.",
-      salary: "₹35,000 - ₹45,000",
-      icon: <FaMobileAlt className="text-amber-400 text-2xl" />,
-      skills: ["React Native", "iOS", "Android", "Flutter"],
-    },
-    {
-      id: 4,
-      title: "AI/ML Engineer",
-      type: "Full-time",
-      location: "HiLITE Business Park, Calicut",
-      department: "Research",
-      description:
-        "Develop machine learning models to solve complex business problems.",
-      salary: "₹40,000 - ₹50,000",
-      icon: <FaBrain className="text-indigo-400 text-2xl" />,
-      skills: ["Python", "TensorFlow", "PyTorch", "NLP"],
-    },
+    // {
+    //   id: 1,
+    //   title: "Frontend Developer",
+    //   type: "Full-time",
+    //   location: "HiLITE Business Park, Calicut",
+    //   department: "Frontend Development",
+    //   description:
+    //     "Build beautiful, responsive user interfaces using React and modern CSS frameworks.",
+    //   salary: "₹30,000 - ₹40,000",
+    //   icon: <FaCode className="text-blue-400 text-2xl" />,
+    //   skills: ["JavaScript", "React", "Tailwind CSS", "TypeScript"],
+    // },
+    // {
+    //   id: 2,
+    //   title: "Backend Developer",
+    //   type: "Full-time",
+    //   location: "HiLITE Business Park, Calicut",
+    //   department: "Backend Development",
+    //   description:
+    //     "Design and implement scalable backend systems with Node.js and cloud technologies.",
+    //   salary: "₹30,000 - ₹40,000",
+    //   icon: <FaServer className="text-emerald-400 text-2xl" />,
+    //   skills: ["Django", "Python", "GraphQL", "REST APIs"],
+    // },
+    // {
+    //   id: 3,
+    //   title: "Mobile Developer",
+    //   type: "Full-time",
+    //   location: "HiLITE Business Park, Calicut",
+    //   department: "App Development",
+    //   description:
+    //     "Create cross-platform mobile applications with React Native.",
+    //   salary: "₹35,000 - ₹45,000",
+    //   icon: <FaMobileAlt className="text-amber-400 text-2xl" />,
+    //   skills: ["React Native", "iOS", "Android", "Flutter"],
+    // },
+    // {
+    //   id: 4,
+    //   title: "AI/ML Engineer",
+    //   type: "Full-time",
+    //   location: "HiLITE Business Park, Calicut",
+    //   department: "Research",
+    //   description:
+    //     "Develop machine learning models to solve complex business problems.",
+    //   salary: "₹40,000 - ₹50,000",
+    //   icon: <FaBrain className="text-indigo-400 text-2xl" />,
+    //   skills: ["Python", "TensorFlow", "PyTorch", "NLP"],
+    // },
   ];
 
   const teamMembers = [
     {
       id: 1,
-      name: "Mohammed Jaseem",
-      role: "IT Manager",
-      department: "Development",
-      image: jaseem,
-      bio: "Technology visionary with 15+ years experience building scalable systems.",
+      name: "Thufail Mohamed",
+      role: "Founder",
+      department: "Leadership",
+      image: thufail,
+      bio: "Entrepreneur and tech leader with a vision for building innovative digital solutions that transform businesses.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#",
+        linkedin: "https://www.linkedin.com/in/thufailm",
+        instagram: "https://www.instagram.com/thufailm",
       },
     },
     {
       id: 2,
-      name: "Suhad KT",
-      role: "Frontend Development",
-      department: "Development",
-      image: suhad,
-      bio: "Passionate about team growth and creating impactful software solutions.",
+      name: "Shihab Mecheri",
+      role: "CEO",
+      department: "Leadership",
+      image: shihab,
+      bio: "Strategic business leader with expertise in scaling tech companies and driving operational excellence.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#",
+        linkedin: "https://www.linkedin.com/in/shihabmrahman/",
+        instagram: "https://www.instagram.com/shihab.mecheri",
       },
     },
     {
       id: 3,
-      name: "Anwar Musthafa",
-      role: "Backend Developer",
-      department: "Development",
-      image: anwar,
-      bio: "Cybersecurity expert focused on building robust defense systems.",
+      name: "Mohammed Jaseem",
+      role: "IT Manager",
+      department: "Technology",
+      image: jaseem,
+      bio: "Full-stack expert with deep knowledge in system architecture and cloud infrastructure.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#",
+        linkedin: "https://www.linkedin.com/in/mohammedjaseemtp",
+        instagram: "https://www.instagram.com/jassy.in",
+        github: "https://github.com/Mohammedjaseem",
       },
     },
     {
       id: 4,
-      name: "Muhammed Afsal",
+      name: "Suhad KT",
       role: "Frontend Developer",
-      department: "Security",
-      image: afsal,
-      bio: "Cybersecurity expert focused on building robust defense systems.",
+      department: "Development",
+      image: suhad,
+      bio: "Specializes in building responsive, accessible user interfaces with React and modern CSS frameworks.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#",
+        linkedin: "https://www.linkedin.com/in/suhad-kt-8b62a5256",
+        instagram: "https://www.instagram.com/suhad_kt",
+        github: "https://github.com/ktsuhad",
       },
     },
     {
       id: 5,
       name: "Harsal M",
       role: "Graphics Designer",
-      department: "Design",
+      department: "Creative",
       image: harsal,
-      bio: "User experience strategist creating intuitive product interfaces.",
+      bio: "Visual storyteller creating compelling brand identities and user-centric design systems.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#",
+        linkedin: "https://www.linkedin.com/in/harsal-m-9b1720289",
+        instagram: "https://www.instagram.com/_harsal",
+      },
+    },
+    {
+      id: 6,
+      name: "Abdul Haseeb AK",
+      role: "Digital Marketing",
+      department: "Marketing",
+      image: haseeb,
+      bio: "Data-driven marketer with expertise in SEO, content strategy, and growth marketing.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/abdul-haseeb-ak",
+        instagram: "https://www.instagram.com/abdulhaseeb.ak",
+      },
+    },
+    {
+      id: 7,
+      name: "Anwar Musthafa",
+      role: "Backend Developer",
+      department: "Development",
+      image: anwar,
+      bio: "Specializes in building scalable backend systems with Django, Python, and cloud technologies.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/anwarmusthafa",
+        instagram: "https://www.instagram.com/anwar_musthafa_",
+        github: "https://github.com/anwarmusthafa",
+      },
+    },
+    {
+      id: 8,
+      name: "Muhammed Afsal",
+      role: "Frontend Developer",
+      department: "Development",
+      image: afsal,
+      bio: "Passionate about creating interactive web applications with React and tailwindCSS.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/afsify",
+        instagram: "https://www.instagram.com/afsify",
+        github: "https://github.com/afsify",
       },
     },
   ];
@@ -337,21 +375,23 @@ const Careers = () => {
                               <FaLinkedin />
                             </a>
                             <a
-                              href={member.social.twitter}
+                              href={member.social.instagram}
                               className="text-gray-300 hover:text-white transition"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
                               <FaInstagram />
                             </a>
-                            <a
-                              href={member.social.github}
-                              className="text-gray-300 hover:text-white transition"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <FaGithub />
-                            </a>
+                            {member.social.github && (
+                              <a
+                                href={member.social.github}
+                                className="text-gray-300 hover:text-white transition"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <FaGithub />
+                              </a>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -498,10 +538,10 @@ const Careers = () => {
                   className="text-center py-12 bg-gray-700 rounded-xl"
                 >
                   <h3 className="text-xl font-medium text-white">
-                    No jobs found matching your criteria
+                    No jobs found at this moment
                   </h3>
                   <p className="text-gray-400 mt-2">
-                    Try adjusting your search or filter parameters
+                    We couldn't find any matching positions at this time
                   </p>
                 </motion.div>
               )}

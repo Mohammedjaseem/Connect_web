@@ -19,11 +19,13 @@ const UserLayout = ({ children }) => {
     {
       name: "About",
       link: userPath.about,
+      hash: "#about",
       icon: <InfoIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Features",
       link: userPath.features,
+      hash: "#features",
       icon: (
         <FormatListBulletedIcon className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
@@ -31,11 +33,13 @@ const UserLayout = ({ children }) => {
     {
       name: "Testimonials",
       link: userPath.testimonials,
+      hash: "#testimonials",
       icon: <TryIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Projects",
       link: userPath.projects,
+      hash: "#projects",
       icon: (
         <AccountTreeIcon className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
@@ -43,11 +47,13 @@ const UserLayout = ({ children }) => {
     {
       name: "Journey",
       link: userPath.journey,
+      hash: "#journey",
       icon: <RouteIcon className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Contact",
       link: userPath.contact,
+      hash: "#contact",
       icon: (
         <ContactMailIcon className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -7,11 +7,30 @@ import {
   useMotionValueEvent,
 } from "motion/react";
 import { cn } from "../../lib/utils";
+import { Link, useLocation } from "react-router-dom";
+import { userPath } from "../../routes/routeConfig";
 
 export const FloatingNav = ({ navItems, className }) => {
-  const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const location = useLocation();
+
+  // Scroll to hash element if hash exists in URL
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  // Helper function to handle hash links
+  const getHref = (hash) => {
+    return location.pathname === userPath.home
+      ? { pathname: userPath.home, hash }
+      : { pathname: userPath.home, hash };
+  };
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -50,16 +69,16 @@ export const FloatingNav = ({ navItems, className }) => {
         )}
       >
         {navItems.map((navItem, idx) => (
-          <a
+          <Link
             key={`link=${idx}`}
-            href={navItem.link}
+            to={getHref(navItem.hash)}
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </a>
+          </Link>
         ))}
       </motion.div>
     </AnimatePresence>
